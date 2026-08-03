@@ -657,35 +657,52 @@ img {
 }
 
 .event-card {
-  min-height: 370px;
+  min-height: 430px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 32px 34px 38px;
+  padding: 0;
   border-right: 1px solid rgba(241, 238, 230, 0.36);
   border-bottom: 1px solid rgba(241, 238, 230, 0.36);
-  transition: background 240ms ease, color 240ms ease;
+  overflow: hidden;
+  transition: background 240ms ease, transform 240ms ease;
 }
 
 .event-card:hover {
-  background: var(--ivory);
-  color: var(--ink);
+  background: rgba(241, 238, 230, 0.06);
+  transform: translateY(-4px);
 }
 
 .event-date {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 22px;
+  align-items: end;
+  padding: 28px 32px 25px;
+  background: var(--ivory);
+  color: var(--red-deep);
   font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
+.event-date span {
+  padding-bottom: 11px;
+  font-size: clamp(14px, 1.25vw, 19px);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
 .event-date strong {
-  padding: 8px 10px;
-  border: 1px solid currentColor;
-  font-weight: 500;
+  font-family: var(--serif);
+  font-size: clamp(92px, 9vw, 142px);
+  font-weight: 400;
+  letter-spacing: -0.07em;
+  line-height: 0.68;
+}
+
+.event-date small {
+  padding-bottom: 10px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
 }
 
 .event-city p,
@@ -700,6 +717,11 @@ img {
 .event-city p {
   margin-bottom: 13px;
   opacity: 0.68;
+}
+
+.event-city {
+  margin-top: auto;
+  padding: 42px 34px 38px;
 }
 
 .event-city h3 {
@@ -1518,8 +1540,30 @@ footer > p {
   }
 
   .event-card {
-    min-height: 310px;
-    padding: 25px 22px 29px;
+    min-height: 360px;
+    padding: 0;
+  }
+
+  .event-date {
+    gap: 13px;
+    padding: 23px 20px 20px;
+  }
+
+  .event-date span {
+    padding-bottom: 8px;
+    font-size: 13px;
+  }
+
+  .event-date strong {
+    font-size: clamp(88px, 28vw, 120px);
+  }
+
+  .event-date small {
+    padding-bottom: 8px;
+  }
+
+  .event-city {
+    padding: 34px 22px 29px;
   }
 
   .event-city h3 {

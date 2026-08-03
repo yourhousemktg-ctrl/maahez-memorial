@@ -216,10 +216,11 @@ export default function Home() {
 
         <div className="event-grid">
           <article className="event-card">
-            <div className="event-date">
+            <time className="event-date" dateTime="2026-08-16" aria-label="August 16, 2026">
               <span>August</span>
               <strong>16</strong>
-            </div>
+              <small>2026</small>
+            </time>
             <div className="event-city">
               <p>Memorial gathering</p>
               <h3>Los Angeles</h3>
@@ -228,10 +229,11 @@ export default function Home() {
           </article>
 
           <article className="event-card">
-            <div className="event-date">
+            <time className="event-date" dateTime="2026-08-23" aria-label="August 23, 2026">
               <span>August</span>
               <strong>23</strong>
-            </div>
+              <small>2026</small>
+            </time>
             <div className="event-city">
               <p>Memorial gathering</p>
               <h3>Miami</h3>
