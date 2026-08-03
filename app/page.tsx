@@ -155,29 +155,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="press-section" id="press" aria-labelledby="press-title">
-        <div className="press-heading">
-          <p className="section-index">03 / Selected press</p>
-          <h2 id="press-title">The story, in his own words.</h2>
-        </div>
-        <div className="press-list">
-          {pressFeatures.map((feature, index) => (
-            <a className="press-card" href={feature.url} target="_blank" rel="noreferrer" key={feature.url}>
-              <div className="press-card-meta">
-                <span>{feature.publication}</span>
-                <span>{feature.date}</span>
-              </div>
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
-              <div className="press-card-footer">
-                <span>0{index + 1}</span>
-                <strong>Read the feature <Arrow /></strong>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
-
       <section className="community-links" aria-label="Maahez community links">
         <a className="community-link community-chat" href={INSTAGRAM_MEMORIAL_CHAT} target="_blank" rel="noreferrer">
           <span>Memorial community</span>
@@ -202,7 +179,7 @@ export default function Home() {
 
       <section className="music-section" id="music">
         <div className="music-copy">
-          <p className="section-index">04 / Keep listening</p>
+          <p className="section-index">03 / Keep listening</p>
           <h2>The music stays.</h2>
           <p>
             Play it loud. Share the records. Let the work keep finding new rooms and new people.
@@ -229,7 +206,7 @@ export default function Home() {
       <section className="events-section" id="events">
         <div className="events-heading">
           <div>
-            <p className="section-index">05 / Memorial events</p>
+            <p className="section-index">04 / Memorial events</p>
             <h2>Come together for Maahez.</h2>
           </div>
           <p>
@@ -296,7 +273,7 @@ export default function Home() {
       <section className="memories-section" id="memories">
         <div className="memories-heading">
           <div>
-            <p className="section-index">06 / Shared Dropbox archive</p>
+            <p className="section-index">05 / Shared Dropbox archive</p>
             <h2>The moments between the stages.</h2>
           </div>
           <div className="memories-aside">
@@ -353,6 +330,29 @@ export default function Home() {
           </span>
           <span className="archive-cta-arrow"><Arrow /></span>
         </a>
+      </section>
+
+      <section className="press-section" id="press" aria-labelledby="press-title">
+        <div className="press-heading">
+          <p className="section-index">06 / Selected press</p>
+          <h2 id="press-title">The story, in his own words.</h2>
+        </div>
+        <div className="press-list">
+          {pressFeatures.map((feature, index) => (
+            <a className="press-card" href={feature.url} target="_blank" rel="noreferrer" key={feature.url}>
+              <div className="press-card-meta">
+                <span>{feature.publication}</span>
+                <span>{feature.date}</span>
+              </div>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+              <div className="press-card-footer">
+                <span>0{index + 1}</span>
+                <strong>Read the feature <Arrow /></strong>
+              </div>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section className="merch-section" id="merch">

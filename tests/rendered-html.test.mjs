@@ -54,7 +54,17 @@ test("server-renders the complete Maahez memorial", async () => {
   const musicIndex = html.indexOf('class="music-section"');
   const eventsIndex = html.indexOf('class="events-section"');
   const photosIndex = html.indexOf('class="photo-pair"');
-  assert.ok(musicIndex >= 0 && eventsIndex > musicIndex && photosIndex > eventsIndex);
+  const memoriesIndex = html.indexOf('class="memories-section"');
+  const pressIndex = html.indexOf('class="press-section"');
+  const merchIndex = html.indexOf('class="merch-section"');
+  assert.ok(
+    musicIndex >= 0 &&
+      eventsIndex > musicIndex &&
+      photosIndex > eventsIndex &&
+      memoriesIndex > photosIndex &&
+      pressIndex > memoriesIndex &&
+      merchIndex > pressIndex,
+  );
 });
 
 test("ships local merchandise assets and motion safeguards", async () => {
