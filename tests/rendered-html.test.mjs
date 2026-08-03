@@ -32,6 +32,9 @@ test("server-renders the complete Maahez memorial", async () => {
   assert.match(html, /<title>MAAHEZ — In Memory of Mauro Menendez<\/title>/i);
   assert.match(html, /Instagram archive/);
   assert.match(html, /Shared Dropbox/);
+  assert.match(html, /The story, in his own words\./);
+  assert.match(html, /Meet MAAHEZ, the House Producer Shaping HUGEL/);
+  assert.match(html, /Rising Music Stars Dirty Audio and MAAHEZ/);
   assert.match(html, /Come together for Maahez\./);
   assert.match(html, /MAAHEZ Burn Memorial Group Chat/);
   assert.match(html, /View all official merchandise/);

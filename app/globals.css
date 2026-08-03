@@ -286,6 +286,112 @@ img {
   line-height: 1.16;
 }
 
+.press-section {
+  padding: 0 7vw 150px;
+  border-top: 1px solid rgba(8, 7, 6, 0.18);
+  background: var(--ivory);
+  color: var(--ink);
+}
+
+.press-heading {
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr;
+  gap: 7vw;
+  align-items: start;
+  padding: 84px 0 70px;
+}
+
+.press-heading .section-index {
+  color: #706b63;
+}
+
+.press-heading h2 {
+  max-width: 910px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(51px, 6.5vw, 98px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+}
+
+.press-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid rgba(8, 7, 6, 0.24);
+  border-left: 1px solid rgba(8, 7, 6, 0.24);
+}
+
+.press-card {
+  min-height: 530px;
+  display: flex;
+  flex-direction: column;
+  padding: 29px 31px 31px;
+  border-right: 1px solid rgba(8, 7, 6, 0.24);
+  border-bottom: 1px solid rgba(8, 7, 6, 0.24);
+  transition: background 240ms ease, color 240ms ease;
+}
+
+.press-card-meta,
+.press-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.press-card-meta span:last-child {
+  color: #817b72;
+}
+
+.press-card h3 {
+  max-width: 670px;
+  margin: 70px 0 24px;
+  font-family: var(--serif);
+  font-size: clamp(32px, 3.4vw, 53px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+.press-card > p {
+  max-width: 580px;
+  margin: 0 0 45px;
+  color: #706b63;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.press-card-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(8, 7, 6, 0.24);
+}
+
+.press-card-footer strong {
+  display: inline-flex;
+  gap: 13px;
+  align-items: center;
+  font-weight: 500;
+}
+
+.press-card:hover,
+.press-card:focus-visible {
+  background: var(--ink);
+  color: var(--ivory);
+}
+
+.press-card:hover .press-card-meta span:last-child,
+.press-card:focus-visible .press-card-meta span:last-child,
+.press-card:hover > p,
+.press-card:focus-visible > p {
+  color: var(--muted);
+}
+
 .community-links {
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
@@ -1180,8 +1286,13 @@ footer > p {
   .music-section,
   .events-heading,
   .memories-heading,
-  .merch-heading {
+  .merch-heading,
+  .press-heading {
     grid-template-columns: 1fr;
+  }
+
+  .press-heading {
+    gap: 28px;
   }
 
   .community-links {
@@ -1297,6 +1408,32 @@ footer > p {
   .events-section,
   .merch-section {
     padding: 100px 20px;
+  }
+
+  .press-section {
+    padding: 0 20px 100px;
+  }
+
+  .press-heading {
+    padding: 65px 0 48px;
+  }
+
+  .press-heading h2 {
+    font-size: clamp(50px, 15vw, 74px);
+  }
+
+  .press-list {
+    grid-template-columns: 1fr;
+  }
+
+  .press-card {
+    min-height: 460px;
+    padding: 24px 21px 25px;
+  }
+
+  .press-card h3 {
+    margin-top: 55px;
+    font-size: clamp(35px, 10.5vw, 48px);
   }
 
   .community-links {

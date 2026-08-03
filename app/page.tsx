@@ -5,6 +5,25 @@ const DROPBOX_URL =
 
 const INSTAGRAM_MEMORIAL_CHAT = "https://ig.me/j/AbZk8mBjLfMaRfqt/";
 
+const pressFeatures = [
+  {
+    publication: "EDM.com",
+    date: "September 3, 2025",
+    title: "Meet MAAHEZ, the House Producer Shaping HUGEL’s Make The Girls Dance Label",
+    description:
+      "An artist spotlight on his Cuban-American perspective, genre-blending sound, global stages, and growing body of work with HUGEL’s label.",
+    url: "https://edm.com/music-releases/artist-spotlight-maahez-hugel-make-the-girls-dance-label/",
+  },
+  {
+    publication: "Authority Magazine",
+    date: "February 13, 2023",
+    title: "Rising Music Stars Dirty Audio and MAAHEZ on What It Takes to Shine",
+    description:
+      "A candid conversation about his origin story, culture, innovation, hard-earned lessons, and the principles he carried into music.",
+    url: "https://medium.com/authority-magazine/rising-music-star-dirty-audio-and-maahez-on-the-five-things-you-need-to-shine-in-the-music-industry-9457494709ce",
+  },
+];
+
 const archiveImages = [
   { src: "/archive/night-out.jpg", alt: "Maahez celebrating with friends", className: "archive-wide" },
   { src: "/archive/desert.jpg", alt: "Maahez with friends in the desert", className: "archive-tall" },
@@ -112,6 +131,7 @@ export default function Home() {
         </a>
         <nav aria-label="Primary navigation">
           <a href="#story">Story</a>
+          <a href="#press">Press</a>
           <a href="#music">Music</a>
           <a href="#events">Events</a>
           <a href="#memories">Photo archive</a>
@@ -163,6 +183,29 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="press-section" id="press" aria-labelledby="press-title">
+        <div className="press-heading">
+          <p className="section-index">03 / Selected press</p>
+          <h2 id="press-title">The story, in his own words.</h2>
+        </div>
+        <div className="press-list">
+          {pressFeatures.map((feature, index) => (
+            <a className="press-card" href={feature.url} target="_blank" rel="noreferrer" key={feature.url}>
+              <div className="press-card-meta">
+                <span>{feature.publication}</span>
+                <span>{feature.date}</span>
+              </div>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+              <div className="press-card-footer">
+                <span>0{index + 1}</span>
+                <strong>Read the feature <Arrow /></strong>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className="community-links" aria-label="Maahez community links">
         <a className="community-link community-instagram" href="https://www.instagram.com/maahez/" target="_blank" rel="noreferrer">
           <span>Instagram archive</span>
@@ -187,7 +230,7 @@ export default function Home() {
 
       <section className="music-section" id="music">
         <div className="music-copy">
-          <p className="section-index">03 / Keep listening</p>
+          <p className="section-index">04 / Keep listening</p>
           <h2>The music stays.</h2>
           <p>
             Play it loud. Share the records. Let the work keep finding new rooms and new people.
@@ -214,7 +257,7 @@ export default function Home() {
       <section className="events-section" id="events">
         <div className="events-heading">
           <div>
-            <p className="section-index">04 / Memorial events</p>
+            <p className="section-index">05 / Memorial events</p>
             <h2>Come together for Maahez.</h2>
           </div>
           <p>
@@ -281,7 +324,7 @@ export default function Home() {
       <section className="memories-section" id="memories">
         <div className="memories-heading">
           <div>
-            <p className="section-index">05 / Shared Dropbox archive</p>
+            <p className="section-index">06 / Shared Dropbox archive</p>
             <h2>The moments between the stages.</h2>
           </div>
           <div className="memories-aside">
@@ -342,7 +385,7 @@ export default function Home() {
 
       <section className="merch-section" id="merch">
         <div className="merch-heading">
-          <p className="section-index">06 / Support his family</p>
+          <p className="section-index">07 / Support his family</p>
           <h2>Wear the memories forward.</h2>
           <div className="family-note">
             <span className="signal-dot" aria-hidden="true" />
