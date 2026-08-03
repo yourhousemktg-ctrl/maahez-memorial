@@ -286,6 +286,93 @@ img {
   line-height: 1.16;
 }
 
+.community-links {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  border-top: 1px solid rgba(241, 238, 230, 0.18);
+  border-bottom: 1px solid rgba(241, 238, 230, 0.18);
+}
+
+.community-link {
+  min-height: 235px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 35px 4vw 37px;
+  overflow: hidden;
+  transition: color 220ms ease, background 220ms ease;
+}
+
+.community-instagram {
+  border-right: 1px solid rgba(241, 238, 230, 0.18);
+  background: var(--ink);
+  color: var(--ivory);
+}
+
+.community-dropbox {
+  background: var(--red);
+  color: white;
+}
+
+.community-link > span,
+.community-link em {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-style: normal;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.community-link > span {
+  opacity: 0.64;
+}
+
+.community-link strong {
+  margin: 24px 0;
+  font-family: var(--serif);
+  font-size: clamp(39px, 5vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.93;
+}
+
+.community-link em {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 17px;
+  border-top: 1px solid currentColor;
+}
+
+.community-instagram:hover,
+.community-instagram:focus-visible {
+  background: #1b1916;
+  color: #f35a50;
+}
+
+.community-dropbox:hover,
+.community-dropbox:focus-visible {
+  background: #d5261b;
+}
+
+.parallax-media {
+  --parallax-shift: 0px;
+  position: absolute;
+  inset: -8% 0;
+  display: block;
+  width: 100%;
+  height: 116%;
+  will-change: transform;
+  transform: translate3d(0, var(--parallax-shift), 0) scale(1.025);
+}
+
+.parallax-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .performance-photo {
   position: relative;
   height: min(83vw, 960px);
@@ -293,7 +380,7 @@ img {
   overflow: hidden;
 }
 
-.performance-photo img {
+.performance-photo .parallax-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -866,7 +953,8 @@ img {
 .merch-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  column-gap: 22px;
+  row-gap: 64px;
 }
 
 .merch-card {
@@ -920,17 +1008,55 @@ img {
   white-space: nowrap;
 }
 
-.text-link {
-  display: inline-flex;
-  gap: 24px;
+.merch-all-link {
+  display: flex;
   align-items: center;
-  margin-top: 64px;
-  padding-bottom: 9px;
-  border-bottom: 1px solid var(--ink);
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 88px;
+  min-height: 180px;
+  padding: 34px 38px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--ivory);
+  transition: background 220ms ease, color 220ms ease, transform 220ms ease;
+}
+
+.merch-all-link small {
+  display: block;
+  margin-bottom: 13px;
+  color: var(--muted);
   font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.15em;
+  font-size: 9px;
+  letter-spacing: 0.17em;
   text-transform: uppercase;
+}
+
+.merch-all-link strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(33px, 4.6vw, 68px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.merch-all-arrow {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(241, 238, 230, 0.5);
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.merch-all-link:hover,
+.merch-all-link:focus-visible {
+  background: var(--red);
+  color: white;
+  transform: translateY(-3px);
 }
 
 .closing-section {
@@ -940,7 +1066,7 @@ img {
   overflow: hidden;
 }
 
-.closing-section > img {
+.closing-section .parallax-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1058,6 +1184,10 @@ footer > p {
     grid-template-columns: 1fr;
   }
 
+  .community-links {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .story-copy {
     padding-top: 0;
   }
@@ -1167,6 +1297,24 @@ footer > p {
   .events-section,
   .merch-section {
     padding: 100px 20px;
+  }
+
+  .community-links {
+    grid-template-columns: 1fr;
+  }
+
+  .community-link {
+    min-height: 205px;
+    padding: 27px 20px 29px;
+  }
+
+  .community-instagram {
+    border-right: 0;
+    border-bottom: 1px solid rgba(241, 238, 230, 0.18);
+  }
+
+  .community-link strong {
+    font-size: clamp(44px, 14vw, 65px);
   }
 
   .story-section {
@@ -1356,11 +1504,27 @@ footer > p {
     font-size: 28px;
   }
 
+  .merch-all-link {
+    min-height: 215px;
+    margin-top: 70px;
+    padding: 27px 22px;
+  }
+
+  .merch-all-link strong {
+    font-size: clamp(34px, 10.5vw, 48px);
+  }
+
+  .merch-all-arrow {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+
   .closing-section {
     min-height: 700px;
   }
 
-  .closing-section > img {
+  .closing-section .parallax-media img {
     object-position: 48% center;
   }
 
@@ -1387,6 +1551,11 @@ footer > p {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .parallax-media {
+    inset: 0;
+    height: 100%;
+    transform: none !important;
+  }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

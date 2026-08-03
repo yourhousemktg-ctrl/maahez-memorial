@@ -1,3 +1,5 @@
+import { ParallaxMedia } from "./parallax-media";
+
 const DROPBOX_URL =
   "https://www.dropbox.com/scl/fo/qzcsu4cwixa4rf7pdpb4f/APnFDB4zZ88cRfSVpodHQGc/%F0%9F%93%B7%20Photos?dl=0&rlkey=bbtu1qa3p6hlcmt1ig41h7jeq&subfolder_nav_tracking=1";
 
@@ -39,21 +41,63 @@ const merch = [
     type: "T-Shirt",
     price: "$40",
     image: "/merch/no-shazam-zone-t-shirt.webp",
-    url: "https://maahez.com/products/no-shazam-zone-t-shirt",
+    url: "https://maahez.com/merch/product/no-shazam-zone-t-shirt",
   },
   {
     name: "Aliens Are Real.",
     type: "T-Shirt",
     price: "$40",
     image: "/merch/aliens-are-real-t-shirt.webp",
-    url: "https://maahez.com/products/aliens-are-real-t-shirt",
+    url: "https://maahez.com/merch/product/aliens-are-real-t-shirt",
   },
   {
     name: "U.F.O.",
     type: "Hoodie",
     price: "$60",
     image: "/merch/u-f-o-hoodie.webp",
-    url: "https://maahez.com/products/u-f-o-hoodie",
+    url: "https://maahez.com/merch/product/u-f-o-hoodie",
+  },
+  {
+    name: "Alchemy",
+    type: "Joggers",
+    price: "$50",
+    image: "/merch/alchemy-joggers.webp",
+    url: "https://maahez.com/merch/product/alchemy-joggers",
+  },
+  {
+    name: "Can't Make This SH*T Up",
+    type: "Tank Top",
+    price: "$40",
+    image: "/merch/cant-make-this-shit-up-tank.webp",
+    url: "https://maahez.com/merch/product/can-t-make-this-sh-t-up-tank-top",
+  },
+  {
+    name: "I Don't Have Drugs",
+    type: "T-Shirt",
+    price: "$40",
+    image: "/merch/i-dont-have-drugs-t-shirt.webp",
+    url: "https://maahez.com/merch/product/i-don-t-have-drugs-t-shirt",
+  },
+  {
+    name: "Perreo Connoisseur",
+    type: "T-Shirt",
+    price: "$40",
+    image: "/merch/perreo-connoisseur-t-shirt.webp",
+    url: "https://maahez.com/merch/product/perreo-connoisseur-t-shirt",
+  },
+  {
+    name: "Mami",
+    type: "Crop Top",
+    price: "$40",
+    image: "/merch/mami-crop-top.webp",
+    url: "https://maahez.com/merch/product/mami-crop-top-t-shirt",
+  },
+  {
+    name: "Where's The Afters",
+    type: "Crop Top",
+    price: "$39.98",
+    image: "/merch/wheres-the-afters-crop-top.webp",
+    url: "https://maahez.com/merch/product/where-s-the-afters-crop-top-t-shirt",
   },
 ];
 
@@ -119,8 +163,25 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="community-links" aria-label="Maahez community links">
+        <a className="community-link community-instagram" href="https://www.instagram.com/maahez/" target="_blank" rel="noreferrer">
+          <span>Instagram archive</span>
+          <strong>@maahez</strong>
+          <em>Visit his Instagram <Arrow /></em>
+        </a>
+        <a className="community-link community-dropbox" href={DROPBOX_URL} target="_blank" rel="noreferrer">
+          <span>Shared Dropbox</span>
+          <strong>Photos &amp; memories</strong>
+          <em>View, download or add yours <Arrow /></em>
+        </a>
+      </section>
+
       <section className="performance-photo" aria-label="Maahez performing to a crowd">
-        <img src="/photos/crowd.webp" alt="Maahez facing a packed dance floor from the DJ booth" />
+        <ParallaxMedia
+          src="/photos/crowd.webp"
+          alt="Maahez facing a packed dance floor from the DJ booth"
+          intensity={62}
+        />
         <p>One room. One frequency.</p>
       </section>
 
@@ -148,16 +209,6 @@ export default function Home() {
             loading="lazy"
           />
         </div>
-      </section>
-
-      <section className="photo-pair" aria-label="Maahez performing">
-        <figure>
-          <img src="/photos/decks-red.webp" alt="Maahez focused on the decks during a red-lit set" />
-        </figure>
-        <figure className="photo-pair-secondary">
-          <img src="/photos/winter-set.webp" alt="Maahez performing an outdoor set in winter" />
-          <figcaption>Always in motion. Always building the next sound.</figcaption>
-        </figure>
       </section>
 
       <section className="events-section" id="events">
@@ -207,6 +258,24 @@ export default function Home() {
             Join on Instagram <Arrow />
           </a>
         </div>
+      </section>
+
+      <section className="photo-pair" aria-label="Maahez performing">
+        <figure>
+          <ParallaxMedia
+            src="/photos/decks-red.webp"
+            alt="Maahez focused on the decks during a red-lit set"
+            intensity={48}
+          />
+        </figure>
+        <figure className="photo-pair-secondary">
+          <ParallaxMedia
+            src="/photos/winter-set.webp"
+            alt="Maahez performing an outdoor set in winter"
+            intensity={48}
+          />
+          <figcaption>Always in motion. Always building the next sound.</figcaption>
+        </figure>
       </section>
 
       <section className="memories-section" id="memories">
@@ -298,13 +367,21 @@ export default function Home() {
           ))}
         </div>
 
-        <a className="text-link" href="https://maahez.com/merch" target="_blank" rel="noreferrer">
-          View all official merchandise <Arrow />
+        <a className="merch-all-link" href="https://maahez.com/merch" target="_blank" rel="noreferrer">
+          <span>
+            <small>Official MAAHEZ store</small>
+            <strong>View all official merchandise</strong>
+          </span>
+          <span className="merch-all-arrow"><Arrow /></span>
         </a>
       </section>
 
       <section className="closing-section">
-        <img src="/photos/dancefloor.webp" alt="Maahez performing beneath a mirror ball" loading="lazy" />
+        <ParallaxMedia
+          src="/photos/dancefloor.webp"
+          alt="Maahez performing beneath a mirror ball"
+          intensity={68}
+        />
         <div className="closing-overlay" />
         <div className="closing-copy">
           <p className="section-index">A life in music</p>
