@@ -42,8 +42,11 @@ test("server-renders the complete Maahez memorial", async () => {
   assert.match(html, /MAAHEZ Burn Memorial Group Chat/);
   assert.match(html, /View all official merchandise/);
   assert.match(html, /Alchemy/);
-  assert.match(html, /Perreo Connoisseur/);
   assert.match(html, /Where's The Afters/);
+  assert.doesNotMatch(html, /No Shazam Zone/);
+  assert.doesNotMatch(html, /Aliens Are Real/);
+  assert.doesNotMatch(html, /I Don(?:&(?:#x27|apos);|')t Have Drugs/);
+  assert.doesNotMatch(html, /Perreo Connoisseur/);
 
   const musicIndex = html.indexOf('class="music-section"');
   const eventsIndex = html.indexOf('class="events-section"');
@@ -68,9 +71,7 @@ test("ships local merchandise assets and motion safeguards", async () => {
   for (const asset of [
     "alchemy-joggers.webp",
     "cant-make-this-shit-up-tank.webp",
-    "i-dont-have-drugs-t-shirt.webp",
     "mami-crop-top.webp",
-    "perreo-connoisseur-t-shirt.webp",
     "wheres-the-afters-crop-top.webp",
   ]) {
     await access(new URL(`../public/merch/${asset}`, import.meta.url));

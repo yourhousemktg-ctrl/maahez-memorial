@@ -56,20 +56,6 @@ const friendsInSound = [
 
 const merch = [
   {
-    name: "No Shazam Zone",
-    type: "T-Shirt",
-    price: "$40",
-    image: "/merch/no-shazam-zone-t-shirt.webp",
-    url: "https://maahez.com/merch/product/no-shazam-zone-t-shirt",
-  },
-  {
-    name: "Aliens Are Real.",
-    type: "T-Shirt",
-    price: "$40",
-    image: "/merch/aliens-are-real-t-shirt.webp",
-    url: "https://maahez.com/merch/product/aliens-are-real-t-shirt",
-  },
-  {
     name: "U.F.O.",
     type: "Hoodie",
     price: "$60",
@@ -89,20 +75,6 @@ const merch = [
     price: "$40",
     image: "/merch/cant-make-this-shit-up-tank.webp",
     url: "https://maahez.com/merch/product/can-t-make-this-sh-t-up-tank-top",
-  },
-  {
-    name: "I Don't Have Drugs",
-    type: "T-Shirt",
-    price: "$40",
-    image: "/merch/i-dont-have-drugs-t-shirt.webp",
-    url: "https://maahez.com/merch/product/i-don-t-have-drugs-t-shirt",
-  },
-  {
-    name: "Perreo Connoisseur",
-    type: "T-Shirt",
-    price: "$40",
-    image: "/merch/perreo-connoisseur-t-shirt.webp",
-    url: "https://maahez.com/merch/product/perreo-connoisseur-t-shirt",
   },
   {
     name: "Mami",
