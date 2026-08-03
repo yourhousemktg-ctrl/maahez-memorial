@@ -1,6 +1,8 @@
 const DROPBOX_URL =
   "https://www.dropbox.com/scl/fo/qzcsu4cwixa4rf7pdpb4f/APnFDB4zZ88cRfSVpodHQGc/%F0%9F%93%B7%20Photos?dl=0&rlkey=bbtu1qa3p6hlcmt1ig41h7jeq&subfolder_nav_tracking=1";
 
+const INSTAGRAM_MEMORIAL_CHAT = "https://ig.me/j/AbZk8mBjLfMaRfqt/";
+
 const archiveImages = [
   { src: "/archive/night-out.jpg", alt: "Maahez celebrating with friends", className: "archive-wide" },
   { src: "/archive/desert.jpg", alt: "Maahez with friends in the desert", className: "archive-tall" },
@@ -46,7 +48,8 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="#story">Story</a>
           <a href="#music">Music</a>
-          <a href="#memories">Memories</a>
+          <a href="#events">Events</a>
+          <a href="#memories">Photo archive</a>
           <a href="#merch">Merch</a>
         </nav>
         <a className="header-social" href="https://www.instagram.com/maahez/" target="_blank" rel="noreferrer">
@@ -136,15 +139,69 @@ export default function Home() {
         </figure>
       </section>
 
+      <section className="events-section" id="events">
+        <div className="events-heading">
+          <div>
+            <p className="section-index">04 / Memorial events</p>
+            <h2>Come together for Maahez.</h2>
+          </div>
+          <p>
+            Friends, family, and the community will gather in Los Angeles and Miami this August. Full dates, venues, and details will be shared as soon as they are confirmed.
+          </p>
+        </div>
+
+        <div className="event-grid">
+          <article className="event-card">
+            <div className="event-date">
+              <span>August</span>
+              <strong>TBD</strong>
+            </div>
+            <div className="event-city">
+              <p>Memorial gathering</p>
+              <h3>Los Angeles</h3>
+              <span>California · Details to come</span>
+            </div>
+          </article>
+
+          <article className="event-card">
+            <div className="event-date">
+              <span>August</span>
+              <strong>TBD</strong>
+            </div>
+            <div className="event-city">
+              <p>Memorial gathering</p>
+              <h3>Miami</h3>
+              <span>Florida · Details to come</span>
+            </div>
+          </article>
+        </div>
+
+        <div className="memorial-chat">
+          <div className="chat-mark" aria-hidden="true">IG</div>
+          <div className="chat-copy">
+            <p>Event announcements and community updates</p>
+            <h3>MAAHEZ Burn Memorial Group Chat</h3>
+          </div>
+          <a href={INSTAGRAM_MEMORIAL_CHAT} target="_blank" rel="noreferrer">
+            Join on Instagram <Arrow />
+          </a>
+        </div>
+      </section>
+
       <section className="memories-section" id="memories">
         <div className="memories-heading">
           <div>
-            <p className="section-index">04 / Shared archive</p>
+            <p className="section-index">05 / Shared Dropbox archive</p>
             <h2>The moments between the stages.</h2>
           </div>
-          <p>
-            A living collection from friends, family, and the people who were there. Add what you remember—or take a photograph with you.
-          </p>
+          <div className="memories-aside">
+            <p>
+              A living collection from friends, family, and the people who were there. Add what you remember—or take a photograph with you.
+            </p>
+            <a className="archive-inline-link" href={DROPBOX_URL} target="_blank" rel="noreferrer">
+              Add your photos to Dropbox <Arrow />
+            </a>
+          </div>
         </div>
 
         <div className="archive-grid">
@@ -156,17 +213,18 @@ export default function Home() {
         </div>
 
         <a className="archive-cta" href={DROPBOX_URL} target="_blank" rel="noreferrer">
-          <span>
-            <small>Community photo archive</small>
-            Open the shared Dropbox
+          <span className="archive-cta-copy">
+            <small>Shared MAAHEZ photo archive</small>
+            <strong>View, download &amp; add photos</strong>
+            <em>Open the community Dropbox folder</em>
           </span>
-          <Arrow />
+          <span className="archive-cta-arrow"><Arrow /></span>
         </a>
       </section>
 
       <section className="merch-section" id="merch">
         <div className="merch-heading">
-          <p className="section-index">05 / Support his family</p>
+          <p className="section-index">06 / Support his family</p>
           <h2>Wear the memories forward.</h2>
           <div className="family-note">
             <span className="signal-dot" aria-hidden="true" />
@@ -212,6 +270,8 @@ export default function Home() {
         <div className="footer-links">
           <a href="https://www.instagram.com/maahez/" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://maahez.com/gallery" target="_blank" rel="noreferrer">Original gallery</a>
+          <a href="#events">Memorial events</a>
+          <a href={INSTAGRAM_MEMORIAL_CHAT} target="_blank" rel="noreferrer">Memorial group chat</a>
           <a href={DROPBOX_URL} target="_blank" rel="noreferrer">Photo archive</a>
           <a href="https://maahez.com/merch" target="_blank" rel="noreferrer">Merch</a>
         </div>
