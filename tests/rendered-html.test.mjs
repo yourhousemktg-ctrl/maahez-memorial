@@ -39,6 +39,9 @@ test("server-renders the complete Maahez memorial", async () => {
   assert.match(html, /Meet MAAHEZ, the House Producer Shaping HUGEL/);
   assert.match(html, /Rising Music Stars Dirty Audio and MAAHEZ/);
   assert.match(html, /Come together for Maahez\./);
+  assert.match(html, /<strong>16<\/strong>[\s\S]*?<h3>Los Angeles<\/h3>/);
+  assert.match(html, /<strong>23<\/strong>[\s\S]*?<h3>Miami<\/h3>/);
+  assert.doesNotMatch(html, /<strong>TBD<\/strong>/);
   assert.match(html, /MAAHEZ Burn Memorial Group Chat/);
   assert.match(html, /View all official merchandise/);
   assert.match(html, /Alchemy/);

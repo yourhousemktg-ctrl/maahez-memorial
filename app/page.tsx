@@ -233,7 +233,7 @@ export default function Home() {
             <h2>Come together for Maahez.</h2>
           </div>
           <p>
-            Friends, family, and the community will gather in Los Angeles and Miami this August. Full dates, venues, and details will be shared as soon as they are confirmed.
+            Friends, family, and the community will gather in Los Angeles and Miami this August. Venues and additional details will be shared as soon as they are confirmed.
           </p>
         </div>
 
@@ -241,7 +241,7 @@ export default function Home() {
           <article className="event-card">
             <div className="event-date">
               <span>August</span>
-              <strong>TBD</strong>
+              <strong>16</strong>
             </div>
             <div className="event-city">
               <p>Memorial gathering</p>
@@ -253,7 +253,7 @@ export default function Home() {
           <article className="event-card">
             <div className="event-date">
               <span>August</span>
-              <strong>TBD</strong>
+              <strong>23</strong>
             </div>
             <div className="event-city">
               <p>Memorial gathering</p>
