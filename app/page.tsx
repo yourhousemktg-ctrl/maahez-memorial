@@ -12,6 +12,27 @@ const archiveImages = [
   { src: "/archive/home.jpg", alt: "A candid memory of Maahez at home", className: "archive-wide" },
 ];
 
+const friendsInSound = [
+  {
+    src: "/archive/maahez-hugel.jpg",
+    eyebrow: "Shared stages",
+    name: "With HUGEL",
+    alt: "Maahez smiling in the DJ booth beside HUGEL",
+  },
+  {
+    src: "/archive/maahez-tiedye.jpg",
+    eyebrow: "Friends & collaborators",
+    name: "With TIEDYE",
+    alt: "Maahez celebrating with TIEDYE and friends",
+  },
+  {
+    src: "/archive/maahez-rick-silver.jpg",
+    eyebrow: "Life beyond the booth",
+    name: "With Rick Silver",
+    alt: "Maahez with Rick Silver and friends",
+  },
+];
+
 const merch = [
   {
     name: "No Shazam Zone",
@@ -196,11 +217,39 @@ export default function Home() {
           </div>
           <div className="memories-aside">
             <p>
-              A living collection from friends, family, and the people who were there. Add what you remember—or take a photograph with you.
+              The archive holds the parts of a life that never fit inside a set list:
+              friendships, studio hours, road trips, sunrise conversations, and
+              the laughter that carried on after the room went quiet.
+            </p>
+            <p>
+              It belongs to everyone who knew him. Add the photographs you keep
+              close, revisit the ones already here, and help preserve the full
+              story of Mauro beyond the stage.
             </p>
             <a className="archive-inline-link" href={DROPBOX_URL} target="_blank" rel="noreferrer">
               Add your photos to Dropbox <Arrow />
             </a>
+          </div>
+        </div>
+
+        <div className="friends-feature">
+          <div className="friends-intro">
+            <p className="section-index">Friends in sound</p>
+            <p>
+              Music kept widening his circle—friends, collaborators, and fellow
+              artists who shared booths, long nights, and the road with him.
+            </p>
+          </div>
+          <div className="friends-grid">
+            {friendsInSound.map((friend) => (
+              <figure className="friend-card" key={friend.src}>
+                <img src={friend.src} alt={friend.alt} loading="lazy" />
+                <figcaption>
+                  <span>{friend.eyebrow}</span>
+                  <strong>{friend.name}</strong>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
 
