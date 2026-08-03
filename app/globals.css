@@ -409,7 +409,7 @@ img {
   transition: color 220ms ease, background 220ms ease;
 }
 
-.community-instagram {
+.community-chat {
   border-right: 1px solid rgba(241, 238, 230, 0.18);
   background: var(--ink);
   color: var(--ivory);
@@ -450,8 +450,8 @@ img {
   border-top: 1px solid currentColor;
 }
 
-.community-instagram:hover,
-.community-instagram:focus-visible {
+.community-chat:hover,
+.community-chat:focus-visible {
   background: #1b1916;
   color: #f35a50;
 }
@@ -1445,7 +1445,7 @@ footer > p {
     padding: 27px 20px 29px;
   }
 
-  .community-instagram {
+  .community-chat {
     border-right: 0;
     border-bottom: 1px solid rgba(241, 238, 230, 0.18);
   }

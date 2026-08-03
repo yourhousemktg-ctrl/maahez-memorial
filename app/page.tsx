@@ -25,7 +25,7 @@ const pressFeatures = [
 ];
 
 const archiveImages = [
-  { src: "/archive/night-out.jpg", alt: "Maahez celebrating with friends", className: "archive-wide" },
+  { src: "/archive/festival-friends.jpg", alt: "Maahez with a friend in front of a festival stage", className: "archive-wide" },
   { src: "/archive/desert.jpg", alt: "Maahez with friends in the desert", className: "archive-tall" },
   { src: "/archive/road.jpg", alt: "Maahez on the road with friends", className: "archive-small" },
   { src: "/archive/city-day.jpg", alt: "Maahez sharing a day in the city", className: "archive-tall" },
@@ -137,8 +137,8 @@ export default function Home() {
           <a href="#memories">Photo archive</a>
           <a href="#merch">Merch</a>
         </nav>
-        <a className="header-social" href="https://www.instagram.com/maahez/" target="_blank" rel="noreferrer">
-          Instagram <Arrow />
+        <a className="header-social" href={INSTAGRAM_MEMORIAL_CHAT} target="_blank" rel="noreferrer">
+          Group chat <Arrow />
         </a>
       </header>
 
@@ -207,10 +207,10 @@ export default function Home() {
       </section>
 
       <section className="community-links" aria-label="Maahez community links">
-        <a className="community-link community-instagram" href="https://www.instagram.com/maahez/" target="_blank" rel="noreferrer">
-          <span>Instagram archive</span>
-          <strong>@maahez</strong>
-          <em>Visit his Instagram <Arrow /></em>
+        <a className="community-link community-chat" href={INSTAGRAM_MEMORIAL_CHAT} target="_blank" rel="noreferrer">
+          <span>Memorial community</span>
+          <strong>Burn Memorial Group Chat</strong>
+          <em>Join on Instagram <Arrow /></em>
         </a>
         <a className="community-link community-dropbox" href={DROPBOX_URL} target="_blank" rel="noreferrer">
           <span>Shared Dropbox</span>
