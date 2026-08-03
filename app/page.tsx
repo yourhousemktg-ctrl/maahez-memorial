@@ -149,7 +149,7 @@ export default function Home() {
           <p className="eyebrow">In memory of Mauro Menendez</p>
           <img className="hero-logo" src="/maahez-logo.webp" alt="Maahez" />
           <h1 id="hero-title" className="sr-only">MAAHEZ — In memory of Mauro Menendez</h1>
-          <p className="hero-line">Artist. Producer. Friend.</p>
+          <p className="hero-line">Artist. Producer. Friend. Legend.</p>
         </div>
         <div className="hero-footer">
           <span>Havana · Mexico City · Miami · Los Angeles</span>

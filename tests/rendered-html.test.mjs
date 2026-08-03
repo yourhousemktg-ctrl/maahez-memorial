@@ -30,6 +30,7 @@ test("server-renders the complete Maahez memorial", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>MAAHEZ — In Memory of Mauro Menendez<\/title>/i);
+  assert.match(html, /Artist\. Producer\. Friend\. Legend\./);
   assert.match(html, /Instagram archive/);
   assert.match(html, /Shared Dropbox/);
   assert.match(html, /The story, in his own words\./);
